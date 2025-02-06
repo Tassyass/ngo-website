@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6{
 /******************** navbar ********************/
 
 #nav_bar{
-    background-color: #00563B;
+    background-color: #3baaa8;
     box-shadow: 0px 2px 10px 4px rgba(0,0,0,0.1);
 }
 
@@ -64,12 +64,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #navbarNav li a:hover{
-    color: #00563B;
+    color: #588b7b;
     font-weight: bold;
 }
 
 #navbarNav .active{
-    background-color: white;
+  
     color: black;
     font-weight: bold;
     border-radius: 10px;
@@ -192,7 +192,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .top_carousel .carousel-item .row h5{
-    color: #00563B;
+    color: #52e6da;
 }
 
 .anime-2{
@@ -316,7 +316,7 @@ h1,h2,h3,h4,h5,h6{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00563B;
+    background-color:  #3baaa8;
     box-shadow: 0 0 0 3px #fff;
     -webkit-box-shadow: 0 0 0 3px #fff;
     transform: translate3d(-50%,-50%,0);
@@ -361,7 +361,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .panel a:hover{
-    color: #00563B;
+    color: #3baaa8;
 }
 
 .panel.panel-card:hover .panel-heading {
@@ -400,7 +400,7 @@ h1,h2,h3,h4,h5,h6{
     margin: auto;
     padding: 20px;
     border-radius: 50%;
-    background-color: #00563B;
+    background-color:  #3baaa8;
     margin-bottom: 20px;
     transition: all 1s ease;
 }
@@ -469,13 +469,13 @@ h1,h2,h3,h4,h5,h6{
 
 .count_div p{
     font-size: 2rem;
-    color: #00563B;
+    color: #3baaa8;
     font-weight: bold;
 }
 
 .count_div span{
     font-size: 2rem;
-    color: #00563B;
+    color:  #3baaa8;
     font-weight: bold;
 }
 
@@ -518,14 +518,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #event .card:hover h5{
-    color: #00563B;
+    color: #3baaa8;
 }
 
 #event .card span{
     position: absolute;
     top: 0;
     left: 0%;
-    background-color: #00563B;
+    background-color: #3baaa8;
     color: white;
     padding: 15px;
     font-weight: bold;
