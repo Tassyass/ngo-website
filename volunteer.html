@@ -15,7 +15,7 @@
     <script src="script.js"></script>
 
     <!-- EmailJS Library -->
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <title>Become a Volunteer</title>
 </head>
@@ -82,29 +82,33 @@
 
     <!-- EmailJS Script -->
     <script>
-        (function() {
-            emailjs.init("your_user_id"); // Replace with your actual EmailJS User ID
-        })();
-    
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("hNoBKzLxmtvGm1YYB"); // Your EmailJS Public Key
+        });
+
         document.getElementById('volunteerForm').addEventListener('submit', function(event) {
             event.preventDefault();
-    
+
             // Collect form values
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
-    
-            // Template parameters
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            // Ensure no empty fields are sent
+            if (!name || !phone || !email) {
+                alert("Please fill in all fields before submitting.");
+                return;
+            }
+
+            // Template parameters (MUST match EmailJS template)
             const templateParams = {
-                name: name,
-                phone: phone,
-                email: email,
-                to_email: "ahlulkheir1@gmail.com",
-                message: `Hello, you got a new volunteer!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`
+                name: name,  // Must match {{name}} in EmailJS template
+                phone: phone, // Must match {{phone}} in EmailJS template
+                email: email  // Must match {{email}} in EmailJS template
             };
-    
+
             // Send email using EmailJS
-            emailjs.send("service_3kb43gv", "template_ec4mrqv", templateParams)
+            emailjs.send("service_kvk4b7r", "template_wai5b4s", templateParams)
                 .then(function(response) {
                     console.log("SUCCESS!", response.status, response.text);
                     document.getElementById('successMessage').style.display = 'block';
@@ -116,7 +120,5 @@
                 });
         });
     </script>
-    
-
 </body>
 </html>
