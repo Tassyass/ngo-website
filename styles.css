@@ -758,3 +758,87 @@ h1,h2,h3,h4,h5,h6{
   }
 
 }
+
+.navbar {
+    padding: 10px 0;  /* Adjust navbar padding */
+    background-color: white;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 70px;  /* Increased height to accommodate logo */
+}
+
+.nav-logo {
+    height: 65px;  /* Larger size for better text readability */
+    width: auto;
+    object-fit: contain;
+    margin: 5px 0;
+    background-color: transparent;
+    padding-right: 10px; /* Add some space after logo */
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .navbar-brand {
+        height: 60px;  /* Slightly smaller on mobile */
+    }
+    
+    .nav-logo {
+        height: 55px;  /* Maintain proportion on mobile */
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 400px) {
+    .navbar-brand {
+        height: 50px;
+    }
+    
+    .nav-logo {
+        height: 45px;
+    }
+}
+
+/* Ensure navbar items align properly with logo */
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Add some spacing between nav items */
+.nav-link {
+    padding: 0.5rem 1rem !important;
+    margin: 0 2px;
+}
+
+.description {
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+}
+
+.description p {
+    margin-bottom: 1rem;
+}
+
+/* Add carousel image size constraints */
+.carousel-item .col-md-6 img {
+    height: 400px;  /* Set a fixed height */
+    object-fit: cover;  /* Maintain aspect ratio while covering the container */
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-item .col-md-6 img {
+        height: 300px;  /* Slightly smaller height on mobile */
+    }
+}
