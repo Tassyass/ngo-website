@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/alhlul favicon.png">
+
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -20,6 +20,12 @@
     <title>Become a Volunteer</title>
 </head>
 <body>
+    <!-- Add donate popup -->
+    <div class="donate-popup">
+        <a href="donate.html" class="donate-button">
+            <i class="fas fa-heart"></i> DONATE NOW
+        </a>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top border-bottom" id="nav_bar">
         <div class="container-fluid px-md-5">
@@ -31,72 +37,83 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end text-center pe-3" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="volunteer.html">Volunteer</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="donate.html">Donate</a>
-                      </li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#aboutt">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#contactt">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="project.html">Project Gallery</a></li>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="volunteer.html">Volunteer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#aboutt">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contactt">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html">Project Gallery</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Volunteer Sign-up Form -->
-    <div class="container mt-5">
-        <h2 class="text-center">Sign Up to Become a Volunteer</h2>
-        <form id="volunteerForm" class="w-75 mx-auto mt-4" style="max-width: 400px;">
-            <div class="mb-2">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-2">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" required>
-            </div>
-            <div class="mb-2">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Submit</button>
-            <p id="successMessage" class="mt-2 text-success text-center" style="display: none;">Form submitted successfully</p>
-        </form>
-    </div>
+    <!-- Wrap content in main tag -->
+    <main>
+        <!-- Volunteer Sign-up Form -->
+        <div class="container mt-5">
+            <h2 class="text-center">Sign Up to Become a Volunteer</h2>
+            <form id="volunteerForm" class="w-75 mx-auto mt-4" style="max-width: 400px;">
+                <div class="mb-2">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-2">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Submit</button>
+                <p id="successMessage" class="mt-2 text-success text-center" style="display: none;">Form submitted successfully</p>
+            </form>
+        </div>
+    </main>
 
     <!-- Footer -->
     <section class="container-fluid text-center text-md-start" id="footer">
         <div class="row py-5">
-          <div class="col-md-4 ps-md-5">
-            <img src="/images/ahlulk logo.png" alt="Ahlulkheir logo">
-            <p class="pt-3 ps-md-5 pe-md-4 text-white">
-                AHLULKHEIR Foundation supports needy Muslim communities in northern Kenya by providing food, water, education, and shelter. Committed to creating lasting change, the organization fosters compassion and solidarity for a brighter future.     
-            </p>
-          </div>
-          <div class="col-md-2 link d-none d-md-block">
-            <h4>Links</h4>
-            <a href="index.html">Home</a>
-            <a href="project.html">What We Do</a>
-            <a href="project.html">Projects</a>
-            <a href="index.html#aboutt">About Us</a>
-            <a href="index.html#contactt">Contact Us</a>
-          </div>
-          
-          <div class="col-md-4 f_contact">
-            <h4>Contact</h4>
-            <a href="volunteer.html">
-              <i class="fa-solid fa-paper-plane"></i>info@ahlulkheirfoundation.org</a>
-            <a href="volunteer.html"> <i class="fa-solid fa-phone"></i>+254 723 802 894 </a>
-            <a href="volunteer.html"> <i class="fa-solid fa-house"></i> Address </a>
-            <a href="">
-              Maralal Oasis, <br />
-              Kilimani <br />
-              Nairobi kenya
-            </a>
-          </div>
+            <div class="col-md-4 ps-md-5">
+                <h6 style="color: GREEN;">AHLULKHEIR LOGO</h6>
+                <!--<img src="https://raw.githubusercontent.com/vinayshilpani/An-NGO-Website/master/assets/logo-white.png" alt="" class="img-fluid ps-md-5" /> -->
+                <p class="pt-3 ps-md-5 pe-md-4 text-white">
+                    AHLULKHEIR Foundation is a humanitarian organization dedicated to supporting needy Muslim communities in northern Kenya. We provide food, clean water, education, and shelter, including madrasas, to uplift lives and create lasting change. Our mission is to inspire compassion and solidarity, ensuring a brighter future for those in need. Join us in making a difference!   
+                </p>
+            </div>
+            <div class="col-md-2 link d-none d-md-block">
+                <h4>Links</h4>
+                <a href="">Home</a>
+                <a href="">What We Do</a>
+                <a href="">Projects</a>
+                <a href="">About Us</a>
+                <a href="">Contact Us</a>
+            </div>
+            
+            <div class="col-md-4 f_contact">
+                <h4 id="contactt">Contact</h4>
+                <a href="volunteer.html">
+                    <i class="fa-solid fa-paper-plane"></i>info@ahlulkheirfoundation.org</a>
+                <a href="volunteer.html"> <i class="fa-solid fa-phone"></i>+254 707 003 666 </a>
+                <a href="volunteer.html"> <i class="fa-solid fa-house"></i> Address </a>
+                <a href="">
+                    ABC building, <br />
+                    Dadaab <br />
+                    Nairobi kenya
+                </a>
+            </div>
         </div>
-      </section>
+    </section>
 
     <!-- Bootstrap Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -140,6 +157,18 @@
                     alert("Error: " + JSON.stringify(error)); // Show detailed error message
                 });
         });
+    </script>
+
+    <!-- bootstrap script -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>

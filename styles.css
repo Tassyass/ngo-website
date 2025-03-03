@@ -547,29 +547,57 @@ h1,h2,h3,h4,h5,h6{
 
 /******************** Team or testimonials  ********************/
 
-#team{
-    background: url();
-    background-attachment: fixed;
-    background-size: cover;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 10px 100px / 120px;
-    border: 1px solid rgba(128, 128, 128, 0.26);
+#team {
+    padding: 40px 0;
 }
 
-#team section img{
-    width: 60px;
+#team h1 {
+    color: #00563B;
+    margin-bottom: 40px;
+}
+
+#team .d-flex {
+    margin: 20px 0;
+}
+
+#team h5 {
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#team span {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: normal;
+}
+
+#team img {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    margin: 0 10px;
+    object-fit: cover;
+    border: 2px solid #00563B;
 }
 
-#team section div{
-    margin: auto;
-    margin-bottom: 15px;
-}
-
-#team section div span{
-    font-size: 1rem;
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #team .d-flex {
+        margin: 30px 0;
+    }
+    
+    #team img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    #team h5 {
+        font-size: 1rem;
+    }
+    
+    #team span {
+        font-size: 0.8rem;
+    }
 }
 
 #review_carousel{
@@ -840,5 +868,93 @@ h1,h2,h3,h4,h5,h6{
 @media screen and (max-width: 768px) {
     .carousel-item .col-md-6 img {
         height: 300px;  /* Slightly smaller height on mobile */
+    }
+}
+
+/* Add spacing for volunteer form */
+#volunteerForm {
+    margin-bottom: 100px;  /* Add space between form and footer */
+}
+
+/* Adjust container spacing */
+.container.mt-5 {
+    margin-bottom: 80px;  /* Additional bottom margin for the container */
+}
+
+/* Ensure footer stays at bottom */
+#footer {
+    margin-top: auto;  /* Push footer to bottom */
+}
+
+/* Add these to ensure proper page layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;  /* Takes up remaining space */
+}
+
+/* Update Floating Donate Button Styles */
+.donate-popup {
+    position: fixed;
+    top: 50%;  /* Center vertically */
+    right: 0;  /* Align to right */
+    transform: translateY(-50%);  /* Center vertically only */
+    z-index: 1000;
+    animation: pulse 2s infinite;
+}
+
+.donate-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #00563B;
+    color: white;
+    padding: 15px 25px 15px 30px;  /* Slightly more padding on left */
+    border-radius: 30px 0 0 30px;  /* Round only left corners */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: -4px 4px 12px rgba(0, 86, 59, 0.3);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.donate-button:hover {
+    background-color: #003d2a;
+    color: white;
+    transform: translateX(-10px);  /* Slide out slightly on hover */
+    box-shadow: -6px 4px 16px rgba(0, 86, 59, 0.4);
+}
+
+.donate-button i {
+    font-size: 20px;
+}
+
+/* Updated Pulse animation */
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.05);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .donate-button {
+        padding: 12px 20px 12px 24px;
+        font-size: 16px;
+    }
+    
+    .donate-button i {
+        font-size: 18px;
     }
 }
