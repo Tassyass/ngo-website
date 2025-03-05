@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Fredoka+One&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Fredoka+One&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 *{
     margin: 0;
@@ -233,7 +238,38 @@ h1,h2,h3,h4,h5,h6{
 
 /******************** welcome ********************/
 
+/* This class controls the position of the popup container */
+.donate-popup {
+    position: fixed;
+    right: 20px;          /* Distance from right edge */
+    top: 50%;            /* Position vertically at 50% */
+    transform: translateY(-50%);  /* Center it perfectly */
+    z-index: 1000;
+}
 
+/* This class controls the button appearance */
+.donate-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00563B;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.donate-button:hover {
+    background-color: #003d2a;
+    color: white;
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 #welcome{
     margin-bottom: 40px;    
 }
@@ -547,57 +583,29 @@ h1,h2,h3,h4,h5,h6{
 
 /******************** Team or testimonials  ********************/
 
-#team {
-    padding: 40px 0;
+#team{
+    background: url();
+    background-attachment: fixed;
+    background-size: cover;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px 100px / 120px;
+    border: 1px solid rgba(128, 128, 128, 0.26);
 }
 
-#team h1 {
-    color: #00563B;
-    margin-bottom: 40px;
-}
-
-#team .d-flex {
-    margin: 20px 0;
-}
-
-#team h5 {
-    margin: 0 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-#team span {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: normal;
-}
-
-#team img {
-    width: 80px;
-    height: 80px;
+#team section img{
+    width: 60px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #00563B;
+    margin: 0 10px;
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-    #team .d-flex {
-        margin: 30px 0;
-    }
-    
-    #team img {
-        width: 60px;
-        height: 60px;
-    }
-    
-    #team h5 {
-        font-size: 1rem;
-    }
-    
-    #team span {
-        font-size: 0.8rem;
-    }
+#team section div{
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+#team section div span{
+    font-size: 1rem;
 }
 
 #review_carousel{
@@ -648,9 +656,10 @@ h1,h2,h3,h4,h5,h6{
 
 #hh_img2 img{
     margin: 20px 10px;
-    max-width: 350px;
+    max-width: 350pxs;
     border-radius: 15px;
     transition: all .8s ease-in;
+    
 }
 
 #helping_hand:hover #hh_img2 img{
@@ -703,7 +712,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #footer .row{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #3baaa8;
 }
 
 #footer .row h4{
@@ -714,20 +723,21 @@ h1,h2,h3,h4,h5,h6{
 
 #footer .link a{
     text-decoration: none;
-    color: white;
+    color: black;
     display: block;
     padding: 5px 8px;
+    
     margin: 5px;
     transition: all .5s ease;
 }
 
 #footer .link a:hover{
-    color: #00563B;
+    color: white;
     transform: scale(1.10);
 }
 
 #footer .f_contact a{
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.1rem;
     display: block;
@@ -785,177 +795,4 @@ h1,h2,h3,h4,h5,h6{
     background-repeat: no-repeat;
   }
 
-}
-
-.navbar {
-    padding: 10px 0;  /* Adjust navbar padding */
-    background-color: white;
-}
-
-.navbar-brand {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    height: 70px;  /* Increased height to accommodate logo */
-}
-
-.nav-logo {
-    height: 65px;  /* Larger size for better text readability */
-    width: auto;
-    object-fit: contain;
-    margin: 5px 0;
-    background-color: transparent;
-    padding-right: 10px; /* Add some space after logo */
-}
-
-/* Mobile adjustments */
-@media screen and (max-width: 768px) {
-    .navbar-brand {
-        height: 60px;  /* Slightly smaller on mobile */
-    }
-    
-    .nav-logo {
-        height: 55px;  /* Maintain proportion on mobile */
-    }
-}
-
-/* Extra small screens */
-@media screen and (max-width: 400px) {
-    .navbar-brand {
-        height: 50px;
-    }
-    
-    .nav-logo {
-        height: 45px;
-    }
-}
-
-/* Ensure navbar items align properly with logo */
-.navbar-nav {
-    align-items: center;
-}
-
-.nav-item {
-    display: flex;
-    align-items: center;
-}
-
-/* Add some spacing between nav items */
-.nav-link {
-    padding: 0.5rem 1rem !important;
-    margin: 0 2px;
-}
-
-.description {
-    padding: 20px;
-    text-align: justify;
-    line-height: 1.6;
-    color: #333;
-}
-
-.description p {
-    margin-bottom: 1rem;
-}
-
-/* Add carousel image size constraints */
-.carousel-item .col-md-6 img {
-    height: 400px;  /* Set a fixed height */
-    object-fit: cover;  /* Maintain aspect ratio while covering the container */
-    width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-item .col-md-6 img {
-        height: 300px;  /* Slightly smaller height on mobile */
-    }
-}
-
-/* Add spacing for volunteer form */
-#volunteerForm {
-    margin-bottom: 100px;  /* Add space between form and footer */
-}
-
-/* Adjust container spacing */
-.container.mt-5 {
-    margin-bottom: 80px;  /* Additional bottom margin for the container */
-}
-
-/* Ensure footer stays at bottom */
-#footer {
-    margin-top: auto;  /* Push footer to bottom */
-}
-
-/* Add these to ensure proper page layout */
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;  /* Takes up remaining space */
-}
-
-/* Update Floating Donate Button Styles */
-.donate-popup {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-}
-
-.donate-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00563B;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    animation: pulse 2s infinite;
-}
-
-.donate-button:hover {
-    background-color: #003d2a;
-    color: white;
-    transform: scale(1.05);
-    text-decoration: none;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.donate-button i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .donate-button {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    
-    .donate-button i {
-        font-size: 16px;
-    }
 }
