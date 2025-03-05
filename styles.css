@@ -900,61 +900,62 @@ main {
 /* Update Floating Donate Button Styles */
 .donate-popup {
     position: fixed;
-    top: 50%;  /* Center vertically */
-    right: 0;  /* Align to right */
-    transform: translateY(-50%);  /* Center vertically only */
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 1000;
-    animation: pulse 2s infinite;
 }
 
 .donate-button {
     display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
     background-color: #00563B;
     color: white;
-    padding: 15px 25px 15px 30px;  /* Slightly more padding on left */
-    border-radius: 30px 0 0 30px;  /* Round only left corners */
+    padding: 15px 25px;
     text-decoration: none;
+    border-radius: 30px;
     font-weight: bold;
-    font-size: 18px;
-    box-shadow: -4px 4px 12px rgba(0, 86, 59, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-    white-space: nowrap;
+    animation: pulse 2s infinite;
 }
 
 .donate-button:hover {
     background-color: #003d2a;
     color: white;
-    transform: translateX(-10px);  /* Slide out slightly on hover */
-    box-shadow: -6px 4px 16px rgba(0, 86, 59, 0.4);
+    transform: scale(1.05);
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .donate-button i {
-    font-size: 20px;
+    margin-right: 8px;
+    font-size: 18px;
 }
 
-/* Updated Pulse animation */
 @keyframes pulse {
     0% {
-        transform: translateY(-50%) scale(1);
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     50% {
-        transform: translateY(-50%) scale(1.05);
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     }
     100% {
-        transform: translateY(-50%) scale(1);
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 }
 
-/* Mobile adjustments */
 @media screen and (max-width: 768px) {
     .donate-button {
-        padding: 12px 20px 12px 24px;
-        font-size: 16px;
+        padding: 12px 20px;
+        font-size: 14px;
     }
     
     .donate-button i {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
